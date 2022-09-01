@@ -21,5 +21,7 @@ jobs:
               run: |
                   docker pull ghcr.io/${{ OWNER,, }}/python-test-example:latest
                   docker-compose up -d
+              env:
+                  OWNER: ${{ github.repository_owner }}
             - name: test
               run: docker-compose exec -T app pytest --cov

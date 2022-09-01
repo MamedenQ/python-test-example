@@ -19,7 +19,7 @@ jobs:
                   OWNER: ${{ github.repository_owner }}
             - name: Set up Docker
               run: |
-                  docker pull ghcr.io/${{ OWNER,, }}/python-test-example:latest
+                  docker pull ghcr.io/${ OWNER,, }/python-test-example:latest
                   docker-compose up -d
               env:
                   OWNER: ${{ github.repository_owner }}

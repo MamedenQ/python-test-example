@@ -23,6 +23,7 @@ jobs:
                   imagename: "python-test-env"
                   tagname: "latest"
     unit-test-job:
+        needs: docker-build-job
         name: run unit-test job
         runs-on: ubuntu-latest
         steps:
